@@ -5,8 +5,6 @@ try:
     from transformers import AdamW
 except:
     from pytorch_transformers import AdamW
-from optim.radam import RAdam
-from optim.lamb import Lamb
 from utils.average_meter import AverageMeter
 from utils.functions import formulate_gold
 from utils.metric import metric, num_metric, overlap_metric
@@ -48,10 +46,6 @@ class Trainer(nn.Module):
             self.optimizer = optim.Adam(grouped_params)
         elif args.optimizer == 'AdamW':
             self.optimizer = AdamW(grouped_params)
-        elif args.optimizer == "RAdam":
-            self.optimizer = RAdam(grouped_params) # , lr=args.learning_rate
-        elif args.optimizer == "Lamb":
-            self.optimizer = Lamb(grouped_params)
         else:
             raise Exception("Invalid optimizer.")
         if args.use_gpu:
