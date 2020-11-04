@@ -4,16 +4,6 @@ python -m main --num_generated_triplets 15 --na_rel_coef 1 --max_grad_norm 1 --m
 ```
 
 ## NYT Exact Match
-```shell
-nohup python -m main --num_generated_triplets 10 --max_grad_norm 1 --na_rel_coef 1 --max_epoch 100 --max_span_length 10
-```
-result: 92.07
-
-```shell
-python -m main --num_generated_triplets 9 --max_grad_norm 1 --na_rel_coef 0.25 --max_epoch 100 --max_span_length 10
-```
-
-result: 92.08
 
 ```shell
 python -m main --num_generated_triplets 15 --max_grad_norm 2.5 --na_rel_coef 0.25 --max_epoch 100 --visible_gpu 4 --max_span_length 10
