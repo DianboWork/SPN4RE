@@ -2,6 +2,7 @@
 ```shell
 python -m main --num_generated_triplets 15 --na_rel_coef 1 --max_grad_norm 1 --max_epoch 100 --max_span_length 10
 ```
+result: 92.5
 
 ## NYT Exact Match
 
