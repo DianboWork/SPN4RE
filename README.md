@@ -1,6 +1,6 @@
 # Joint Entity and Relation Extraction with Set Prediction Networks
-[![GitHub stars](https://img.shields.io/github/stars/DianboWork/Graph4CNER?style=flat-square)](https://github.com/DianboWork/SPN4RE/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DianboWork/Graph4CNER?style=flat-square&color=blueviolet)](https://github.com/DianboWork/SPN4RE/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/DianboWork/SPN4RE?style=flat-square)](https://github.com/DianboWork/SPN4RE/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/DianboWork/SPN4RE?style=flat-square&color=blueviolet)](https://github.com/DianboWork/SPN4RE/network/members)
 
 Source code for [Joint Entity and Relation Extraction with Set Prediction Networks](https://arxiv.org/abs/2011.01675). If you use this code or our results in your research, we would appreciate it if you cite our paper as following:
 
@@ -12,6 +12,7 @@ Source code for [Joint Entity and Relation Extraction with Set Prediction Networ
   year={2020}
 }
 ```
+##  Model Training
 
 ###  NYT Partial Match
 ```shell
@@ -32,5 +33,5 @@ python -m main --num_generated_triplets 15 --max_grad_norm 1 --na_rel_coef 0.5 -
 ```shell
 python -m main --batch_size 4 --num_generated_triplets 10 --na_rel_coef 0.25 --max_grad_norm 20  --max_epoch 100 --encoder_lr 0.00002 --decoder_lr 0.00005 --num_decoder_layers 4 --max_span_length 10 --weight_decay 0.000001 --lr_decay 0.02
 ```
-### Model Parameters
+## Trained Model Parameters
 Model parameters can be download in [Baidu Pan](https://pan.baidu.com/s/1nL-qZs16x684d98APVn8FQ) (key: SetP) :sunglasses:
