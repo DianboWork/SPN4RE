@@ -2,7 +2,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/DianboWork/SPN4RE?style=flat-square)](https://github.com/DianboWork/SPN4RE/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/DianboWork/SPN4RE?style=flat-square&color=blueviolet)](https://github.com/DianboWork/SPN4RE/network/members)
 
-Source code for [Joint Entity and Relation Extraction with Set Prediction Networks](https://arxiv.org/abs/2011.01675). If you use this code or our results in your research, we would appreciate it if you cite our paper as following:
+Source code for [Joint Entity and Relation Extraction with Set Prediction Networks](https://arxiv.org/abs/2011.01675). We would appreciate it if you cite our paper as following:
 
 ```
 @article{sui2020joint,
