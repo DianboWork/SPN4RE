@@ -1,8 +1,10 @@
 import torch.nn as nn
 import torch
 from models.set_decoder import SetDecoder
+from models.set_criterion import SetCriterion
 from models.seq_encoder import SeqEncoder
-from utils.functions import generate_triplet
+from utils.functions import generate_triple
+import copy
 
 
 class SetPred4RE(nn.Module):
@@ -13,7 +15,8 @@ class SetPred4RE(nn.Module):
         self.encoder = SeqEncoder(args)
         config = self.encoder.config
         self.num_classes = num_classes
-        self.decoder = SetDecoder(config, args.num_generated_triplets, args.num_decoder_layers, num_classes, return_intermediate=False)
+        self.decoder = SetDecoder(config, args.num_generated_triples, args.num_decoder_layers, num_classes, return_intermediate=False)
+        self.criterion = SetCriterion(num_classes,  loss_weight=self.get_loss_weight(args), na_coef=args.na_rel_coef, losses=["entity", "relation"], matcher=args.matcher)
 
     def forward(self, input_ids, attention_mask, targets=None):
         last_hidden_state, pooler_output = self.encoder(input_ids, attention_mask)
@@ -22,7 +25,7 @@ class SetPred4RE(nn.Module):
         head_start_logits = head_start_logits.squeeze(-1).masked_fill((1 - attention_mask.unsqueeze(1)).bool(), -10000.0)
         head_end_logits = head_end_logits.squeeze(-1).masked_fill((1 - attention_mask.unsqueeze(1)).bool(), -10000.0)
         tail_start_logits = tail_start_logits.squeeze(-1).masked_fill((1 - attention_mask.unsqueeze(1)).bool(), -10000.0)
-        tail_end_logits = tail_end_logits.squeeze(-1).masked_fill((1 - attention_mask.unsqueeze(1)).bool(), -10000.0)# [bsz, num_generated_triplets, seq_len]
+        tail_end_logits = tail_end_logits.squeeze(-1).masked_fill((1 - attention_mask.unsqueeze(1)).bool(), -10000.0)# [bsz, num_generated_triples, seq_len]
         outputs = {'pred_rel_logits': class_logits, 'head_start_logits': head_start_logits, 'head_end_logits': head_end_logits, 'tail_start_logits': tail_start_logits, 'tail_end_logits': tail_end_logits}
         if targets is not None:
             loss = self.criterion(outputs, targets)
@@ -30,13 +33,13 @@ class SetPred4RE(nn.Module):
         else:
             return outputs
 
-    def gen_triplets(self, input_ids, attention_mask, info):
+    def gen_triples(self, input_ids, attention_mask, info):
         with torch.no_grad():
             outputs = self.forward(input_ids, attention_mask)
             # print(outputs)
-            pred_triplet = generate_triplet(outputs, info, self.args, self.num_classes)
+            pred_triple = generate_triple(outputs, info, self.args, self.num_classes)
             # print(pred_triple)
-        return pred_triplet
+        return pred_triple
 
     def batchify(self, batch_list):
         batch_size = len(batch_list)
@@ -60,11 +63,7 @@ class SetPred4RE(nn.Module):
         return input_ids, attention_mask, targets, info
 
 
+
     @staticmethod
     def get_loss_weight(args):
         return {"relation": args.rel_loss_weight, "head_entity": args.head_ent_loss_weight, "tail_entity": args.tail_ent_loss_weight}
-
-
-
-
-
