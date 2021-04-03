@@ -60,7 +60,7 @@ if __name__ == '__main__':
     data_arg.add_argument("--partial", type=str2bool, default=False)
     learn_arg = add_argument_group('Learning')
     learn_arg.add_argument('--model_name', type=str, default="Set-Prediction-Networks")
-    learn_arg.add_argument('--num_generated_triplets', type=int, default=10)
+    learn_arg.add_argument('--num_generated_triples', type=int, default=10)
     learn_arg.add_argument('--num_decoder_layers', type=int, default=3)
     learn_arg.add_argument('--matcher', type=str, default="avg", choices=['avg', 'min'])
     learn_arg.add_argument('--na_rel_coef', type=float, default=1)
