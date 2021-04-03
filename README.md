@@ -22,6 +22,8 @@ Transformers: 2.6.0
 
 ###  NYT Partial Match
 * Note That: Replacing BERT_DIR in the command line with the actual directory of BERT-base-cased in your machine!!!
+* 注意：需将命令行中的BERT_DIR替换为你机器中实际存储BERT的目录！！！
+
 ```shell
 python -m main --bert_directory BERT_DIR --num_generated_triplets 15 --na_rel_coef 1 --max_grad_norm 1 --max_epoch 100 --max_span_length 10
 ```
