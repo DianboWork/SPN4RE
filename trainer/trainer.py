@@ -5,7 +5,7 @@ from transformers import AdamW
 from utils.average_meter import AverageMeter
 from utils.functions import formulate_gold
 from utils.metric import metric, num_metric, overlap_metric
-import nni
+
 
 class Trainer(nn.Module):
     def __init__(self, model, data, args):
@@ -94,7 +94,6 @@ class Trainer(nn.Module):
             print("=== Epoch %d Test ===" % epoch, flush=True)
             result = self.eval_model(self.data.test_loader)
             f1 = result['f1']
-            """@nni.report_intermediate_result(f1)"""
             if f1 > best_f1:
                 print("Achieving Best Result on Test Set.", flush=True)
                 # torch.save({'state_dict': self.model.state_dict()}, self.args.generated_param_directory + " %s_%s_epoch_%d_f1_%.4f.model" %(self.model.name, self.args.dataset_name, epoch, result['f1']))
@@ -105,7 +104,6 @@ class Trainer(nn.Module):
             gc.collect()
             torch.cuda.empty_cache()
         print("Best result on test set is %f achieving at epoch %d." % (best_f1, best_result_epoch), flush=True)
-        """@nni.report_final_result(best_f1)"""
 
 
     def eval_model(self, eval_loader):
