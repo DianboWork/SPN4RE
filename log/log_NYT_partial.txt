@@ -1,0 +1,1371 @@
+nohup: ignoring input
+dataset_name : NYT-partial
+train_file : ./data/NYT/casrel_data/new_train.json
+valid_file : ./data/NYT/casrel_data/new_valid.json
+test_file : ./data/NYT/casrel_data/new_test.json
+generated_data_directory : ./data/generated_data/
+generated_param_directory : ./data/generated_data/model_param/
+bert_directory : ./bert_base_cased/
+partial : False
+model_name : Set-Prediction-Networks
+num_generated_triples : 15
+num_decoder_layers : 3
+matcher : avg
+na_rel_coef : 1.0
+rel_loss_weight : 1
+head_ent_loss_weight : 2
+tail_ent_loss_weight : 2
+fix_bert_embeddings : True
+batch_size : 8
+max_epoch : 100
+gradient_accumulation_steps : 1
+decoder_lr : 2e-05
+encoder_lr : 1e-05
+lr_decay : 0.01
+weight_decay : 1e-05
+max_grad_norm : 1.0
+optimizer : AdamW
+n_best_size : 100
+max_span_length : 10
+refresh : False
+use_gpu : True
+visible_gpu : 4
+random_seed : 1
+Data setting is loaded from file:  ./data/generated_data/NYT-partial_Set-Prediction-Networks_data.pickle
+DATA SUMMARY START:
+     Relation Alphabet Size: 24
+     Train  Instance Number: 56195
+     Valid  Instance Number: 4999
+     Test   Instance Number: 5000
+DATA SUMMARY END.
+=== Epoch 0 train ===
+     Instance: 8000; loss: 3.1011
+     Instance: 16000; loss: 2.2162
+     Instance: 24000; loss: 1.8150
+     Instance: 32000; loss: 1.5734
+     Instance: 40000; loss: 1.4100
+     Instance: 48000; loss: 1.2915
+     Instance: 56000; loss: 1.1988
+=== Epoch 0 Test ===
+gold_num =  8110  pred_num =  6896  right_num =  5725  relation_right_num =  6138  entity_right_num =  6173
+precision =  0.830191415313225  recall =  0.7059186189889026  f1_value =  0.7630281220844995
+rel_precision =  0.8900812064965197  rel_recall =  0.7568434032059186  rel_f1_value =  0.8180727708916433
+ent_precision =  0.8951566125290024  ent_recall =  0.7611590628853268  ent_f1_value =  0.8227375716380115
+Achieving Best Result on Test Set.
+=== Epoch 1 train ===
+     Instance: 8000; loss: 0.4671
+     Instance: 16000; loss: 0.4796
+     Instance: 24000; loss: 0.4701
+     Instance: 32000; loss: 0.4732
+     Instance: 40000; loss: 0.4714
+     Instance: 48000; loss: 0.4618
+     Instance: 56000; loss: 0.4528
+=== Epoch 1 Test ===
+gold_num =  8110  pred_num =  6970  right_num =  6258  relation_right_num =  6612  entity_right_num =  6425
+precision =  0.8978479196556671  recall =  0.7716399506781751  f1_value =  0.829973474801061
+rel_precision =  0.9486370157819225  rel_recall =  0.8152897657213317  rel_f1_value =  0.8769230769230769
+ent_precision =  0.9218077474892395  ent_recall =  0.7922318125770653  ent_f1_value =  0.8521220159151193
+Achieving Best Result on Test Set.
+=== Epoch 2 train ===
+     Instance: 8000; loss: 0.3178
+     Instance: 16000; loss: 0.3180
+     Instance: 24000; loss: 0.3182
+     Instance: 32000; loss: 0.3159
+     Instance: 40000; loss: 0.3160
+     Instance: 48000; loss: 0.3109
+     Instance: 56000; loss: 0.3119
+=== Epoch 2 Test ===
+gold_num =  8110  pred_num =  7472  right_num =  6559  relation_right_num =  6996  entity_right_num =  6737
+precision =  0.8778104925053534  recall =  0.8087546239210851  f1_value =  0.8418688230008985
+rel_precision =  0.9362955032119914  rel_recall =  0.8626387176325524  rel_f1_value =  0.8979591836734694
+ent_precision =  0.9016327623126338  ent_recall =  0.8307028360049322  ent_f1_value =  0.8647156975997946
+Achieving Best Result on Test Set.
+=== Epoch 3 train ===
+     Instance: 8000; loss: 0.2466
+     Instance: 16000; loss: 0.2410
+     Instance: 24000; loss: 0.2445
+     Instance: 32000; loss: 0.2472
+     Instance: 40000; loss: 0.2473
+     Instance: 48000; loss: 0.2486
+     Instance: 56000; loss: 0.2487
+=== Epoch 3 Test ===
+gold_num =  8110  pred_num =  7474  right_num =  6678  relation_right_num =  7064  entity_right_num =  6842
+precision =  0.8934974578538935  recall =  0.8234278668310727  f1_value =  0.8570328542094454
+rel_precision =  0.9451431629649452  rel_recall =  0.8710234278668311  rel_f1_value =  0.906570841889117
+ent_precision =  0.9154401926679154  ent_recall =  0.8436498150431566  ent_f1_value =  0.8780800821355237
+Achieving Best Result on Test Set.
+=== Epoch 4 train ===
+     Instance: 8000; loss: 0.2014
+     Instance: 16000; loss: 0.2060
+     Instance: 24000; loss: 0.2061
+     Instance: 32000; loss: 0.2073
+     Instance: 40000; loss: 0.2087
+     Instance: 48000; loss: 0.2039
+     Instance: 56000; loss: 0.2069
+=== Epoch 4 Test ===
+gold_num =  8110  pred_num =  7594  right_num =  6869  relation_right_num =  7259  entity_right_num =  6968
+precision =  0.9045298920200158  recall =  0.8469790382244143  f1_value =  0.8748089658685685
+rel_precision =  0.9558862259678693  rel_recall =  0.8950678175092478  rel_f1_value =  0.9244778400407538
+ent_precision =  0.9175664998683171  ent_recall =  0.8591861898890258  ent_f1_value =  0.8874172185430463
+Achieving Best Result on Test Set.
+=== Epoch 5 train ===
+     Instance: 8000; loss: 0.2012
+     Instance: 16000; loss: 0.1781
+     Instance: 24000; loss: 0.1818
+     Instance: 32000; loss: 0.1793
+     Instance: 40000; loss: 0.1770
+     Instance: 48000; loss: 0.1748
+     Instance: 56000; loss: 0.1774
+=== Epoch 5 Test ===
+gold_num =  8110  pred_num =  7443  right_num =  6817  relation_right_num =  7103  entity_right_num =  6955
+precision =  0.9158941287115411  recall =  0.8405672009864364  f1_value =  0.8766154439657943
+rel_precision =  0.9543194948273546  rel_recall =  0.8758323057953145  rel_f1_value =  0.9133929145502475
+ent_precision =  0.934435039634556  ent_recall =  0.8575832305795315  ent_f1_value =  0.8943612164855655
+Achieving Best Result on Test Set.
+=== Epoch 6 train ===
+     Instance: 8000; loss: 0.1568
+     Instance: 16000; loss: 0.1458
+     Instance: 24000; loss: 0.1440
+     Instance: 32000; loss: 0.1480
+     Instance: 40000; loss: 0.1504
+     Instance: 48000; loss: 0.1473
+     Instance: 56000; loss: 0.1491
+=== Epoch 6 Test ===
+gold_num =  8110  pred_num =  7798  right_num =  7030  relation_right_num =  7421  entity_right_num =  7152
+precision =  0.9015132085150038  recall =  0.8668310727496917  f1_value =  0.8838320341966307
+rel_precision =  0.9516542703257246  rel_recall =  0.915043156596794  rel_f1_value =  0.9329896907216496
+ent_precision =  0.9171582457040267  ent_recall =  0.8818742293464858  ent_f1_value =  0.8991702288156902
+Achieving Best Result on Test Set.
+=== Epoch 7 train ===
+     Instance: 8000; loss: 0.1125
+     Instance: 16000; loss: 0.1163
+     Instance: 24000; loss: 0.1177
+     Instance: 32000; loss: 0.1234
+     Instance: 40000; loss: 0.1257
+     Instance: 48000; loss: 0.1309
+     Instance: 56000; loss: 0.1346
+=== Epoch 7 Test ===
+gold_num =  8110  pred_num =  7659  right_num =  6996  relation_right_num =  7350  entity_right_num =  7084
+precision =  0.9134351743047395  recall =  0.8626387176325524  f1_value =  0.8873105460079904
+rel_precision =  0.9596553074813945  rel_recall =  0.906288532675709  rel_f1_value =  0.9322087640306931
+ent_precision =  0.924924924924925  ent_recall =  0.8734895191122072  ent_f1_value =  0.8984716849514871
+Achieving Best Result on Test Set.
+=== Epoch 8 train ===
+     Instance: 8000; loss: 0.1192
+     Instance: 16000; loss: 0.1202
+     Instance: 24000; loss: 0.1212
+     Instance: 32000; loss: 0.1218
+     Instance: 40000; loss: 0.1206
+     Instance: 48000; loss: 0.1191
+     Instance: 56000; loss: 0.1177
+=== Epoch 8 Test ===
+gold_num =  8110  pred_num =  7741  right_num =  7078  relation_right_num =  7452  entity_right_num =  7160
+precision =  0.9143521508848986  recall =  0.8727496917385943  f1_value =  0.8930666834900006
+rel_precision =  0.9626663221805968  rel_recall =  0.918865598027127  rel_f1_value =  0.940256135259605
+ent_precision =  0.9249450975326186  ent_recall =  0.8828606658446363  ent_f1_value =  0.9034130338779889
+Achieving Best Result on Test Set.
+=== Epoch 9 train ===
+     Instance: 8000; loss: 0.1102
+     Instance: 16000; loss: 0.1089
+     Instance: 24000; loss: 0.1011
+     Instance: 32000; loss: 0.1028
+     Instance: 40000; loss: 0.1008
+     Instance: 48000; loss: 0.1012
+     Instance: 56000; loss: 0.1021
+=== Epoch 9 Test ===
+gold_num =  8110  pred_num =  7886  right_num =  7161  relation_right_num =  7525  entity_right_num =  7282
+precision =  0.9080649251838702  recall =  0.882983970406905  f1_value =  0.8953488372093023
+rel_precision =  0.9542226730915546  rel_recall =  0.9278668310727497  rel_f1_value =  0.9408602150537634
+ent_precision =  0.9234085721531828  ent_recall =  0.8979038224414303  ent_f1_value =  0.9104776194048512
+Achieving Best Result on Test Set.
+=== Epoch 10 train ===
+     Instance: 8000; loss: 0.0986
+     Instance: 16000; loss: 0.0916
+     Instance: 24000; loss: 0.0897
+     Instance: 32000; loss: 0.0925
+     Instance: 40000; loss: 0.0939
+     Instance: 48000; loss: 0.0920
+     Instance: 56000; loss: 0.0931
+=== Epoch 10 Test ===
+gold_num =  8110  pred_num =  7959  right_num =  7185  relation_right_num =  7582  entity_right_num =  7302
+precision =  0.9027516019600452  recall =  0.8859432799013564  f1_value =  0.8942684672350488
+rel_precision =  0.9526322402311849  rel_recall =  0.9348951911220715  rel_f1_value =  0.9436803783682868
+ent_precision =  0.917451941198643  ent_recall =  0.9003699136868064  ent_f1_value =  0.9088306677453483
+=== Epoch 11 train ===
+     Instance: 8000; loss: 0.0711
+     Instance: 16000; loss: 0.0924
+     Instance: 24000; loss: 0.0845
+     Instance: 32000; loss: 0.0793
+     Instance: 40000; loss: 0.0762
+     Instance: 48000; loss: 0.0847
+     Instance: 56000; loss: 0.0845
+=== Epoch 11 Test ===
+gold_num =  8110  pred_num =  8211  right_num =  7319  relation_right_num =  7796  entity_right_num =  7429
+precision =  0.8913652417488734  recall =  0.9024660912453761  f1_value =  0.8968813185466578
+rel_precision =  0.9494580440872001  rel_recall =  0.9612823674475955  rel_f1_value =  0.9553336192635254
+ent_precision =  0.9047619047619048  ent_recall =  0.9160295930949445  ent_f1_value =  0.9103608847497089
+Achieving Best Result on Test Set.
+=== Epoch 12 train ===
+     Instance: 8000; loss: 0.0565
+     Instance: 16000; loss: 0.0623
+     Instance: 24000; loss: 0.0717
+     Instance: 32000; loss: 0.0703
+     Instance: 40000; loss: 0.0707
+     Instance: 48000; loss: 0.0733
+     Instance: 56000; loss: 0.0744
+=== Epoch 12 Test ===
+gold_num =  8110  pred_num =  8036  right_num =  7247  relation_right_num =  7659  entity_right_num =  7340
+precision =  0.9018168242906919  recall =  0.8935881627620222  f1_value =  0.8976836368140715
+rel_precision =  0.953086112493778  rel_recall =  0.9443896424167694  rel_f1_value =  0.9487179487179486
+ent_precision =  0.9133897461423593  ent_recall =  0.905055487053021  ent_f1_value =  0.9092035178991701
+Achieving Best Result on Test Set.
+=== Epoch 13 train ===
+     Instance: 8000; loss: 0.0739
+     Instance: 16000; loss: 0.0632
+     Instance: 24000; loss: 0.0617
+     Instance: 32000; loss: 0.0656
+     Instance: 40000; loss: 0.0678
+     Instance: 48000; loss: 0.0672
+     Instance: 56000; loss: 0.0694
+=== Epoch 13 Test ===
+gold_num =  8110  pred_num =  7919  right_num =  7203  relation_right_num =  7611  entity_right_num =  7278
+precision =  0.9095845435029676  recall =  0.8881627620221948  f1_value =  0.898746022833614
+rel_precision =  0.9611062002778129  rel_recall =  0.9384710234278668  rel_f1_value =  0.9496537525734607
+ent_precision =  0.9190554362924611  ent_recall =  0.8974106041923551  ent_f1_value =  0.9081040613887329
+Achieving Best Result on Test Set.
+=== Epoch 14 train ===
+     Instance: 8000; loss: 0.0574
+     Instance: 16000; loss: 0.0680
+     Instance: 24000; loss: 0.0664
+     Instance: 32000; loss: 0.0644
+     Instance: 40000; loss: 0.0644
+     Instance: 48000; loss: 0.0653
+     Instance: 56000; loss: 0.0654
+=== Epoch 14 Test ===
+gold_num =  8110  pred_num =  7915  right_num =  7244  relation_right_num =  7593  entity_right_num =  7334
+precision =  0.9152242577384713  recall =  0.8932182490752157  f1_value =  0.9040873634945398
+rel_precision =  0.9593177511054959  rel_recall =  0.9362515413070284  rel_f1_value =  0.9476443057722309
+ent_precision =  0.926595072646873  ent_recall =  0.9043156596794082  ent_f1_value =  0.9153198127925117
+Achieving Best Result on Test Set.
+=== Epoch 15 train ===
+     Instance: 8000; loss: 0.0730
+     Instance: 16000; loss: 0.0651
+     Instance: 24000; loss: 0.0623
+     Instance: 32000; loss: 0.0596
+     Instance: 40000; loss: 0.0590
+     Instance: 48000; loss: 0.0581
+     Instance: 56000; loss: 0.0591
+=== Epoch 15 Test ===
+gold_num =  8110  pred_num =  8101  right_num =  7283  relation_right_num =  7707  entity_right_num =  7383
+precision =  0.8990248117516356  recall =  0.8980271270036991  f1_value =  0.8985256924310653
+rel_precision =  0.9513640291322059  rel_recall =  0.950308261405672  rel_f1_value =  0.950835852199124
+ent_precision =  0.911368966794223  ent_recall =  0.9103575832305796  ent_f1_value =  0.9108629942631546
+=== Epoch 16 train ===
+     Instance: 8000; loss: 0.0550
+     Instance: 16000; loss: 0.0505
+     Instance: 24000; loss: 0.0537
+     Instance: 32000; loss: 0.0559
+     Instance: 40000; loss: 0.0538
+     Instance: 48000; loss: 0.0572
+     Instance: 56000; loss: 0.0583
+=== Epoch 16 Test ===
+gold_num =  8110  pred_num =  8083  right_num =  7334  relation_right_num =  7762  entity_right_num =  7434
+precision =  0.9073363850055672  recall =  0.9043156596794082  f1_value =  0.9058235039832027
+rel_precision =  0.9602870221452431  rel_recall =  0.9570900123304562  rel_f1_value =  0.9586858519113196
+ent_precision =  0.9197080291970803  ent_recall =  0.9166461159062885  ent_f1_value =  0.918174519854258
+Achieving Best Result on Test Set.
+=== Epoch 17 train ===
+     Instance: 8000; loss: 0.0475
+     Instance: 16000; loss: 0.0467
+     Instance: 24000; loss: 0.0530
+     Instance: 32000; loss: 0.0527
+     Instance: 40000; loss: 0.0528
+     Instance: 48000; loss: 0.0506
+     Instance: 56000; loss: 0.0500
+=== Epoch 17 Test ===
+gold_num =  8110  pred_num =  8123  right_num =  7308  relation_right_num =  7717  entity_right_num =  7410
+precision =  0.8996676104887357  recall =  0.9011097410604192  f1_value =  0.9003880983182406
+rel_precision =  0.9500184660839591  rel_recall =  0.95154130702836  rel_f1_value =  0.9507792767818641
+ent_precision =  0.912224547580943  ent_recall =  0.9136868064118372  ent_f1_value =  0.912955091480318
+=== Epoch 18 train ===
+     Instance: 8000; loss: 0.0396
+     Instance: 16000; loss: 0.0510
+     Instance: 24000; loss: 0.0486
+     Instance: 32000; loss: 0.0474
+     Instance: 40000; loss: 0.0450
+     Instance: 48000; loss: 0.0457
+     Instance: 56000; loss: 0.0475
+=== Epoch 18 Test ===
+gold_num =  8110  pred_num =  8010  right_num =  7308  relation_right_num =  7676  entity_right_num =  7387
+precision =  0.9123595505617977  recall =  0.9011097410604192  f1_value =  0.9066997518610421
+rel_precision =  0.9583021223470661  rel_recall =  0.9464858199753391  rel_f1_value =  0.9523573200992556
+ent_precision =  0.9222222222222223  ent_recall =  0.9108508014796547  ent_f1_value =  0.916501240694789
+Achieving Best Result on Test Set.
+=== Epoch 19 train ===
+     Instance: 8000; loss: 0.0427
+     Instance: 16000; loss: 0.0486
+     Instance: 24000; loss: 0.0425
+     Instance: 32000; loss: 0.0449
+     Instance: 40000; loss: 0.0429
+     Instance: 48000; loss: 0.0416
+     Instance: 56000; loss: 0.0411
+=== Epoch 19 Test ===
+gold_num =  8110  pred_num =  7961  right_num =  7338  relation_right_num =  7669  entity_right_num =  7416
+precision =  0.9217434995603567  recall =  0.9048088779284833  f1_value =  0.9131976852716072
+rel_precision =  0.9633211908051752  rel_recall =  0.9456226880394575  rel_f1_value =  0.9543898948416403
+ent_precision =  0.9315412636603442  ent_recall =  0.9144266337854501  ent_f1_value =  0.922904610789621
+Achieving Best Result on Test Set.
+=== Epoch 20 train ===
+     Instance: 8000; loss: 0.0308
+     Instance: 16000; loss: 0.0431
+     Instance: 24000; loss: 0.0428
+     Instance: 32000; loss: 0.0452
+     Instance: 40000; loss: 0.0433
+     Instance: 48000; loss: 0.0426
+     Instance: 56000; loss: 0.0438
+=== Epoch 20 Test ===
+gold_num =  8110  pred_num =  8097  right_num =  7380  relation_right_num =  7747  entity_right_num =  7477
+precision =  0.9114486846980363  recall =  0.9099876695437731  f1_value =  0.9107175911643117
+rel_precision =  0.9567741138693343  rel_recall =  0.9552404438964242  rel_f1_value =  0.9560066637872524
+ent_precision =  0.9234284302828208  ent_recall =  0.9219482120838471  ent_f1_value =  0.9226877275251435
+=== Epoch 21 train ===
+     Instance: 8000; loss: 0.0526
+     Instance: 16000; loss: 0.0445
+     Instance: 24000; loss: 0.0423
+     Instance: 32000; loss: 0.0442
+     Instance: 40000; loss: 0.0439
+     Instance: 48000; loss: 0.0432
+     Instance: 56000; loss: 0.0450
+=== Epoch 21 Test ===
+gold_num =  8110  pred_num =  7997  right_num =  7326  relation_right_num =  7668  entity_right_num =  7416
+precision =  0.9160935350756534  recall =  0.9033292231812577  f1_value =  0.9096666045818589
+rel_precision =  0.9588595723396274  rel_recall =  0.9454993834771886  rel_f1_value =  0.9521326131495623
+ent_precision =  0.9273477554082781  ent_recall =  0.9144266337854501  ent_f1_value =  0.9208418699944123
+=== Epoch 22 train ===
+     Instance: 8000; loss: 0.0318
+     Instance: 16000; loss: 0.0462
+     Instance: 24000; loss: 0.0425
+     Instance: 32000; loss: 0.0414
+     Instance: 40000; loss: 0.0412
+     Instance: 48000; loss: 0.0394
+     Instance: 56000; loss: 0.0391
+=== Epoch 22 Test ===
+gold_num =  8110  pred_num =  8174  right_num =  7390  relation_right_num =  7819  entity_right_num =  7483
+precision =  0.9040861267433326  recall =  0.9112207151664612  f1_value =  0.9076394006386638
+rel_precision =  0.9565696109615855  rel_recall =  0.964118372379778  rel_f1_value =  0.9603291574551708
+ent_precision =  0.9154636652801565  ent_recall =  0.9226880394574599  ent_f1_value =  0.9190616556128713
+=== Epoch 23 train ===
+     Instance: 8000; loss: 0.0339
+     Instance: 16000; loss: 0.0467
+     Instance: 24000; loss: 0.0426
+     Instance: 32000; loss: 0.0427
+     Instance: 40000; loss: 0.0401
+     Instance: 48000; loss: 0.0382
+     Instance: 56000; loss: 0.0393
+=== Epoch 23 Test ===
+gold_num =  8110  pred_num =  7960  right_num =  7327  relation_right_num =  7664  entity_right_num =  7398
+precision =  0.9204773869346734  recall =  0.9034525277435265  f1_value =  0.9118855009334162
+rel_precision =  0.9628140703517588  rel_recall =  0.9450061652281134  rel_f1_value =  0.953827006845053
+ent_precision =  0.9293969849246231  ent_recall =  0.9122071516646116  ent_f1_value =  0.9207218419415059
+=== Epoch 24 train ===
+     Instance: 8000; loss: 0.0359
+     Instance: 16000; loss: 0.0370
+     Instance: 24000; loss: 0.0340
+     Instance: 32000; loss: 0.0346
+     Instance: 40000; loss: 0.0386
+     Instance: 48000; loss: 0.0398
+     Instance: 56000; loss: 0.0405
+=== Epoch 24 Test ===
+gold_num =  8110  pred_num =  8148  right_num =  7375  relation_right_num =  7800  entity_right_num =  7479
+precision =  0.9051300932744232  recall =  0.9093711467324291  f1_value =  0.9072456636732686
+rel_precision =  0.9572901325478645  rel_recall =  0.9617755856966708  rel_f1_value =  0.9595276171730841
+ent_precision =  0.9178939617083947  ent_recall =  0.9221948212083847  ent_f1_value =  0.9200393652355763
+=== Epoch 25 train ===
+     Instance: 8000; loss: 0.0354
+     Instance: 16000; loss: 0.0302
+     Instance: 24000; loss: 0.0354
+     Instance: 32000; loss: 0.0359
+     Instance: 40000; loss: 0.0353
+     Instance: 48000; loss: 0.0377
+     Instance: 56000; loss: 0.0373
+=== Epoch 25 Test ===
+gold_num =  8110  pred_num =  8109  right_num =  7363  relation_right_num =  7730  entity_right_num =  7457
+precision =  0.9080034529535085  recall =  0.9078914919852035  f1_value =  0.9079474690178186
+rel_precision =  0.9532618078678012  rel_recall =  0.9531442663378545  rel_f1_value =  0.9532030334792527
+ent_precision =  0.919595511160439  ent_recall =  0.919482120838471  ent_f1_value =  0.9195388125038535
+=== Epoch 26 train ===
+     Instance: 8000; loss: 0.0255
+     Instance: 16000; loss: 0.0258
+     Instance: 24000; loss: 0.0257
+     Instance: 32000; loss: 0.0254
+     Instance: 40000; loss: 0.0256
+     Instance: 48000; loss: 0.0272
+     Instance: 56000; loss: 0.0277
+=== Epoch 26 Test ===
+gold_num =  8110  pred_num =  7942  right_num =  7341  relation_right_num =  7666  entity_right_num =  7417
+precision =  0.924326366154621  recall =  0.9051787916152898  f1_value =  0.9146523797657614
+rel_precision =  0.9652480483505415  rel_recall =  0.9452527743526511  rel_f1_value =  0.9551457762272615
+ent_precision =  0.9338957441450516  ent_recall =  0.9145499383477189  ent_f1_value =  0.9241216047844505
+Achieving Best Result on Test Set.
+=== Epoch 27 train ===
+     Instance: 8000; loss: 0.0325
+     Instance: 16000; loss: 0.0318
+     Instance: 24000; loss: 0.0303
+     Instance: 32000; loss: 0.0306
+     Instance: 40000; loss: 0.0309
+     Instance: 48000; loss: 0.0301
+     Instance: 56000; loss: 0.0314
+=== Epoch 27 Test ===
+gold_num =  8110  pred_num =  8008  right_num =  7337  relation_right_num =  7715  entity_right_num =  7426
+precision =  0.9162087912087912  recall =  0.9046855733662146  f1_value =  0.9104107209331183
+rel_precision =  0.9634115884115884  rel_recall =  0.9512946979038225  rel_f1_value =  0.9573148033254747
+ent_precision =  0.9273226773226774  ent_recall =  0.9156596794081381  ent_f1_value =  0.9214542747239112
+=== Epoch 28 train ===
+     Instance: 8000; loss: 0.0200
+     Instance: 16000; loss: 0.0226
+     Instance: 24000; loss: 0.0252
+     Instance: 32000; loss: 0.0244
+     Instance: 40000; loss: 0.0260
+     Instance: 48000; loss: 0.0275
+     Instance: 56000; loss: 0.0284
+=== Epoch 28 Test ===
+gold_num =  8110  pred_num =  8044  right_num =  7375  relation_right_num =  7747  entity_right_num =  7450
+precision =  0.9168324216807558  recall =  0.9093711467324291  f1_value =  0.913086542032933
+rel_precision =  0.963078070611636  rel_recall =  0.9552404438964242  rel_f1_value =  0.9591432462547975
+ent_precision =  0.9261561412232721  ent_recall =  0.9186189889025894  ent_f1_value =  0.9223721678841155
+=== Epoch 29 train ===
+     Instance: 8000; loss: 0.0347
+     Instance: 16000; loss: 0.0317
+     Instance: 24000; loss: 0.0322
+     Instance: 32000; loss: 0.0290
+     Instance: 40000; loss: 0.0274
+     Instance: 48000; loss: 0.0273
+     Instance: 56000; loss: 0.0282
+=== Epoch 29 Test ===
+gold_num =  8110  pred_num =  8179  right_num =  7403  relation_right_num =  7822  entity_right_num =  7493
+precision =  0.9051228756571708  recall =  0.9128236744759556  f1_value =  0.9089569648228867
+rel_precision =  0.9563516322288789  rel_recall =  0.9644882860665844  rel_f1_value =  0.9604027257658543
+ent_precision =  0.9161266658515711  ent_recall =  0.9239210850801479  ent_f1_value =  0.9200073669347412
+=== Epoch 30 train ===
+     Instance: 8000; loss: 0.0226
+     Instance: 16000; loss: 0.0227
+     Instance: 24000; loss: 0.0246
+     Instance: 32000; loss: 0.0248
+     Instance: 40000; loss: 0.0252
+     Instance: 48000; loss: 0.0247
+     Instance: 56000; loss: 0.0236
+=== Epoch 30 Test ===
+gold_num =  8110  pred_num =  7956  right_num =  7333  relation_right_num =  7685  entity_right_num =  7400
+precision =  0.9216943187531422  recall =  0.9041923551171394  f1_value =  0.9128594547491597
+rel_precision =  0.9659376571141277  rel_recall =  0.9475955610357584  rel_f1_value =  0.9566787003610109
+ent_precision =  0.930115635997989  ent_recall =  0.9124537607891492  ent_f1_value =  0.9212000497945974
+=== Epoch 31 train ===
+     Instance: 8000; loss: 0.0242
+     Instance: 16000; loss: 0.0345
+     Instance: 24000; loss: 0.0326
+     Instance: 32000; loss: 0.0300
+     Instance: 40000; loss: 0.0295
+     Instance: 48000; loss: 0.0283
+     Instance: 56000; loss: 0.0264
+=== Epoch 31 Test ===
+gold_num =  8110  pred_num =  8128  right_num =  7414  relation_right_num =  7803  entity_right_num =  7493
+precision =  0.9121555118110236  recall =  0.9141800246609124  f1_value =  0.9131666461386869
+rel_precision =  0.9600147637795275  rel_recall =  0.9621454993834772  rel_f1_value =  0.961078950609681
+ent_precision =  0.921875  ent_recall =  0.9239210850801479  ent_f1_value =  0.9228969084862668
+=== Epoch 32 train ===
+     Instance: 8000; loss: 0.0237
+     Instance: 16000; loss: 0.0234
+     Instance: 24000; loss: 0.0243
+     Instance: 32000; loss: 0.0226
+     Instance: 40000; loss: 0.0236
+     Instance: 48000; loss: 0.0235
+     Instance: 56000; loss: 0.0259
+=== Epoch 32 Test ===
+gold_num =  8110  pred_num =  8179  right_num =  7388  relation_right_num =  7807  entity_right_num =  7490
+precision =  0.9032889106247708  recall =  0.9109741060419235  f1_value =  0.9071152311375775
+rel_precision =  0.9545176671964788  rel_recall =  0.9626387176325524  rel_f1_value =  0.9585609920805451
+ent_precision =  0.9157598728450911  ent_recall =  0.9235511713933415  ent_f1_value =  0.9196390201976794
+=== Epoch 33 train ===
+     Instance: 8000; loss: 0.0186
+     Instance: 16000; loss: 0.0195
+     Instance: 24000; loss: 0.0188
+     Instance: 32000; loss: 0.0188
+     Instance: 40000; loss: 0.0186
+     Instance: 48000; loss: 0.0184
+     Instance: 56000; loss: 0.0191
+=== Epoch 33 Test ===
+gold_num =  8110  pred_num =  7980  right_num =  7337  relation_right_num =  7688  entity_right_num =  7413
+precision =  0.9194235588972431  recall =  0.9046855733662146  f1_value =  0.9119950279676818
+rel_precision =  0.9634085213032582  rel_recall =  0.9479654747225648  rel_f1_value =  0.9556246115599751
+ent_precision =  0.9289473684210526  ent_recall =  0.9140567200986437  ent_f1_value =  0.921441889372281
+=== Epoch 34 train ===
+     Instance: 8000; loss: 0.0187
+     Instance: 16000; loss: 0.0202
+     Instance: 24000; loss: 0.0192
+     Instance: 32000; loss: 0.0209
+     Instance: 40000; loss: 0.0226
+     Instance: 48000; loss: 0.0250
+     Instance: 56000; loss: 0.0241
+=== Epoch 34 Test ===
+gold_num =  8110  pred_num =  8019  right_num =  7367  relation_right_num =  7735  entity_right_num =  7441
+precision =  0.9186931038782891  recall =  0.9083847102342787  f1_value =  0.913509827019654
+rel_precision =  0.9645841127322609  rel_recall =  0.9537607891491985  rel_f1_value =  0.9591419182838365
+ent_precision =  0.9279211871804465  ent_recall =  0.9175092478421701  ent_f1_value =  0.9226858453716908
+=== Epoch 35 train ===
+     Instance: 8000; loss: 0.0167
+     Instance: 16000; loss: 0.0193
+     Instance: 24000; loss: 0.0189
+     Instance: 32000; loss: 0.0205
+     Instance: 40000; loss: 0.0202
+     Instance: 48000; loss: 0.0202
+     Instance: 56000; loss: 0.0205
+=== Epoch 35 Test ===
+gold_num =  8110  pred_num =  8022  right_num =  7371  relation_right_num =  7724  entity_right_num =  7442
+precision =  0.918848167539267  recall =  0.9088779284833539  f1_value =  0.9138358542028268
+rel_precision =  0.962852156569434  rel_recall =  0.9524044389642417  rel_f1_value =  0.9575998016364989
+ent_precision =  0.9276988282223885  ent_recall =  0.917632552404439  ent_f1_value =  0.9226382345648401
+=== Epoch 36 train ===
+     Instance: 8000; loss: 0.0176
+     Instance: 16000; loss: 0.0201
+     Instance: 24000; loss: 0.0210
+     Instance: 32000; loss: 0.0197
+     Instance: 40000; loss: 0.0202
+     Instance: 48000; loss: 0.0193
+     Instance: 56000; loss: 0.0184
+=== Epoch 36 Test ===
+gold_num =  8110  pred_num =  8005  right_num =  7364  relation_right_num =  7697  entity_right_num =  7440
+precision =  0.9199250468457214  recall =  0.9080147965474723  f1_value =  0.9139311200744648
+rel_precision =  0.961524047470331  rel_recall =  0.9490752157829839  rel_f1_value =  0.9552590753955941
+ent_precision =  0.929419113054341  ent_recall =  0.9173859432799013  ent_f1_value =  0.9233633260937014
+=== Epoch 37 train ===
+     Instance: 8000; loss: 0.0172
+     Instance: 16000; loss: 0.0178
+     Instance: 24000; loss: 0.0157
+     Instance: 32000; loss: 0.0160
+     Instance: 40000; loss: 0.0171
+     Instance: 48000; loss: 0.0165
+     Instance: 56000; loss: 0.0171
+=== Epoch 37 Test ===
+gold_num =  8110  pred_num =  8127  right_num =  7431  relation_right_num =  7805  entity_right_num =  7525
+precision =  0.914359542266519  recall =  0.9162762022194821  f1_value =  0.9153168688797192
+rel_precision =  0.9603789836347976  rel_recall =  0.9623921085080148  rel_f1_value =  0.9613844922091519
+ent_precision =  0.9259259259259259  ent_recall =  0.9278668310727497  ent_f1_value =  0.9268953624438012
+Achieving Best Result on Test Set.
+=== Epoch 38 train ===
+     Instance: 8000; loss: 0.0183
+     Instance: 16000; loss: 0.0169
+     Instance: 24000; loss: 0.0171
+     Instance: 32000; loss: 0.0181
+     Instance: 40000; loss: 0.0176
+     Instance: 48000; loss: 0.0186
+     Instance: 56000; loss: 0.0177
+=== Epoch 38 Test ===
+gold_num =  8110  pred_num =  8079  right_num =  7435  relation_right_num =  7787  entity_right_num =  7516
+precision =  0.9202871642530016  recall =  0.9167694204685574  f1_value =  0.9185249243313361
+rel_precision =  0.9638569129842802  rel_recall =  0.9601726263871764  rel_f1_value =  0.9620112422014949
+ent_precision =  0.930313157569006  ent_recall =  0.9267570900123304  ent_f1_value =  0.9285317190685032
+Achieving Best Result on Test Set.
+=== Epoch 39 train ===
+     Instance: 8000; loss: 0.0206
+     Instance: 16000; loss: 0.0168
+     Instance: 24000; loss: 0.0161
+     Instance: 32000; loss: 0.0181
+     Instance: 40000; loss: 0.0171
+     Instance: 48000; loss: 0.0177
+     Instance: 56000; loss: 0.0192
+=== Epoch 39 Test ===
+gold_num =  8110  pred_num =  8086  right_num =  7411  relation_right_num =  7773  entity_right_num =  7489
+precision =  0.9165223843680436  recall =  0.913810110974106  f1_value =  0.9151642380834774
+rel_precision =  0.9612911204551076  rel_recall =  0.958446362515413  rel_f1_value =  0.9598666337367252
+ent_precision =  0.9261686866188474  ent_recall =  0.9234278668310727  ent_f1_value =  0.9247962459866634
+=== Epoch 40 train ===
+     Instance: 8000; loss: 0.0219
+     Instance: 16000; loss: 0.0192
+     Instance: 24000; loss: 0.0178
+     Instance: 32000; loss: 0.0163
+     Instance: 40000; loss: 0.0177
+     Instance: 48000; loss: 0.0188
+     Instance: 56000; loss: 0.0182
+=== Epoch 40 Test ===
+gold_num =  8110  pred_num =  7983  right_num =  7393  relation_right_num =  7708  entity_right_num =  7468
+precision =  0.9260929475134662  recall =  0.9115906288532676  f1_value =  0.9187845647175791
+rel_precision =  0.9655517975698359  rel_recall =  0.9504315659679408  rel_f1_value =  0.9579320201329771
+ent_precision =  0.9354879118126018  ent_recall =  0.9208384710234279  ent_f1_value =  0.928105387435531
+Achieving Best Result on Test Set.
+=== Epoch 41 train ===
+     Instance: 8000; loss: 0.0127
+     Instance: 16000; loss: 0.0113
+     Instance: 24000; loss: 0.0142
+     Instance: 32000; loss: 0.0177
+     Instance: 40000; loss: 0.0175
+     Instance: 48000; loss: 0.0187
+     Instance: 56000; loss: 0.0192
+=== Epoch 41 Test ===
+gold_num =  8110  pred_num =  7941  right_num =  7340  relation_right_num =  7658  entity_right_num =  7403
+precision =  0.9243168366704445  recall =  0.905055487053021  f1_value =  0.9145847610740764
+rel_precision =  0.9643621710112077  rel_recall =  0.9442663378545006  rel_f1_value =  0.9542084605320541
+ent_precision =  0.932250346303992  ent_recall =  0.9128236744759556  ent_f1_value =  0.9224347392685814
+=== Epoch 42 train ===
+     Instance: 8000; loss: 0.0146
+     Instance: 16000; loss: 0.0142
+     Instance: 24000; loss: 0.0148
+     Instance: 32000; loss: 0.0153
+     Instance: 40000; loss: 0.0161
+     Instance: 48000; loss: 0.0161
+     Instance: 56000; loss: 0.0159
+=== Epoch 42 Test ===
+gold_num =  8110  pred_num =  8083  right_num =  7411  relation_right_num =  7775  entity_right_num =  7488
+precision =  0.9168625510330323  recall =  0.913810110974106  f1_value =  0.9153337862039153
+rel_precision =  0.9618953358901398  rel_recall =  0.9586929716399507  rel_f1_value =  0.9602914839745569
+ent_precision =  0.9263887170604973  ent_recall =  0.923304562268804  ent_f1_value =  0.924844068424628
+=== Epoch 43 train ===
+     Instance: 8000; loss: 0.0099
+     Instance: 16000; loss: 0.0128
+     Instance: 24000; loss: 0.0147
+     Instance: 32000; loss: 0.0162
+     Instance: 40000; loss: 0.0160
+     Instance: 48000; loss: 0.0171
+     Instance: 56000; loss: 0.0165
+=== Epoch 43 Test ===
+gold_num =  8110  pred_num =  8133  right_num =  7419  relation_right_num =  7806  entity_right_num =  7498
+precision =  0.9122095167834747  recall =  0.9147965474722565  f1_value =  0.9135012005171458
+rel_precision =  0.9597934341571376  rel_recall =  0.9625154130702837  rel_f1_value =  0.9611524964600137
+ent_precision =  0.921923029632362  ent_recall =  0.924537607891492  ent_f1_value =  0.923228467647602
+=== Epoch 44 train ===
+     Instance: 8000; loss: 0.0133
+     Instance: 16000; loss: 0.0126
+     Instance: 24000; loss: 0.0113
+     Instance: 32000; loss: 0.0147
+     Instance: 40000; loss: 0.0140
+     Instance: 48000; loss: 0.0141
+     Instance: 56000; loss: 0.0142
+=== Epoch 44 Test ===
+gold_num =  8110  pred_num =  8104  right_num =  7405  relation_right_num =  7788  entity_right_num =  7479
+precision =  0.913746298124383  recall =  0.9130702836004932  f1_value =  0.9134081657826569
+rel_precision =  0.9610069101678184  rel_recall =  0.9602959309494451  rel_f1_value =  0.9606512890094979
+ent_precision =  0.9228775913129319  ent_recall =  0.9221948212083847  ent_f1_value =  0.9225360799309238
+=== Epoch 45 train ===
+     Instance: 8000; loss: 0.0207
+     Instance: 16000; loss: 0.0155
+     Instance: 24000; loss: 0.0132
+     Instance: 32000; loss: 0.0149
+     Instance: 40000; loss: 0.0159
+     Instance: 48000; loss: 0.0154
+     Instance: 56000; loss: 0.0151
+=== Epoch 45 Test ===
+gold_num =  8110  pred_num =  7959  right_num =  7385  relation_right_num =  7697  entity_right_num =  7458
+precision =  0.9278803869832893  recall =  0.9106041923551171  f1_value =  0.919161117680005
+rel_precision =  0.9670812916195501  rel_recall =  0.9490752157829839  rel_f1_value =  0.9579936523741365
+ent_precision =  0.9370523935167735  ent_recall =  0.9196054254007399  ent_f1_value =  0.928246935092414
+Achieving Best Result on Test Set.
+=== Epoch 46 train ===
+     Instance: 8000; loss: 0.0196
+     Instance: 16000; loss: 0.0148
+     Instance: 24000; loss: 0.0148
+     Instance: 32000; loss: 0.0154
+     Instance: 40000; loss: 0.0153
+     Instance: 48000; loss: 0.0153
+     Instance: 56000; loss: 0.0155
+=== Epoch 46 Test ===
+gold_num =  8110  pred_num =  8004  right_num =  7370  relation_right_num =  7725  entity_right_num =  7435
+precision =  0.9207896051974013  recall =  0.9087546239210851  f1_value =  0.9147325307186298
+rel_precision =  0.9651424287856072  rel_recall =  0.9525277435265105  rel_f1_value =  0.9587935956311282
+ent_precision =  0.9289105447276362  ent_recall =  0.9167694204685574  ent_f1_value =  0.9228000496462703
+=== Epoch 47 train ===
+     Instance: 8000; loss: 0.0130
+     Instance: 16000; loss: 0.0177
+     Instance: 24000; loss: 0.0177
+     Instance: 32000; loss: 0.0162
+     Instance: 40000; loss: 0.0155
+     Instance: 48000; loss: 0.0149
+     Instance: 56000; loss: 0.0147
+=== Epoch 47 Test ===
+gold_num =  8110  pred_num =  8033  right_num =  7413  relation_right_num =  7745  entity_right_num =  7483
+precision =  0.9228183742063986  recall =  0.9140567200986437  f1_value =  0.918416651180078
+rel_precision =  0.96414788995394  rel_recall =  0.9549938347718866  rel_f1_value =  0.9595490305395526
+ent_precision =  0.9315324287314827  ent_recall =  0.9226880394574599  ent_f1_value =  0.9270891408040638
+=== Epoch 48 train ===
+     Instance: 8000; loss: 0.0135
+     Instance: 16000; loss: 0.0181
+     Instance: 24000; loss: 0.0161
+     Instance: 32000; loss: 0.0144
+     Instance: 40000; loss: 0.0143
+     Instance: 48000; loss: 0.0137
+     Instance: 56000; loss: 0.0133
+=== Epoch 48 Test ===
+gold_num =  8110  pred_num =  7889  right_num =  7365  relation_right_num =  7657  entity_right_num =  7416
+precision =  0.933578400304221  recall =  0.908138101109741  f1_value =  0.9206825426589161
+rel_precision =  0.9705919634934719  rel_recall =  0.9441430332922318  rel_f1_value =  0.9571848240515033
+ent_precision =  0.9400430979845354  ent_recall =  0.9144266337854501  ent_f1_value =  0.9270579411213202
+Achieving Best Result on Test Set.
+=== Epoch 49 train ===
+     Instance: 8000; loss: 0.0142
+     Instance: 16000; loss: 0.0155
+     Instance: 24000; loss: 0.0130
+     Instance: 32000; loss: 0.0132
+     Instance: 40000; loss: 0.0121
+     Instance: 48000; loss: 0.0114
+     Instance: 56000; loss: 0.0131
+=== Epoch 49 Test ===
+gold_num =  8110  pred_num =  8030  right_num =  7403  relation_right_num =  7749  entity_right_num =  7474
+precision =  0.9219178082191781  recall =  0.9128236744759556  f1_value =  0.9173482032218092
+rel_precision =  0.9650062266500623  rel_recall =  0.9554870530209618  rel_f1_value =  0.9602230483271376
+ent_precision =  0.9307596513075965  ent_recall =  0.9215782983970406  ent_f1_value =  0.9261462205700125
+=== Epoch 50 train ===
+     Instance: 8000; loss: 0.0095
+     Instance: 16000; loss: 0.0111
+     Instance: 24000; loss: 0.0157
+     Instance: 32000; loss: 0.0147
+     Instance: 40000; loss: 0.0139
+     Instance: 48000; loss: 0.0140
+     Instance: 56000; loss: 0.0136
+=== Epoch 50 Test ===
+gold_num =  8110  pred_num =  8075  right_num =  7392  relation_right_num =  7772  entity_right_num =  7461
+precision =  0.9154179566563467  recall =  0.9114673242909987  f1_value =  0.9134383688600556
+rel_precision =  0.9624767801857586  rel_recall =  0.9583230579531443  rel_f1_value =  0.9603954278653074
+ent_precision =  0.9239628482972136  ent_recall =  0.9199753390875463  ent_f1_value =  0.9219647822057462
+=== Epoch 51 train ===
+     Instance: 8000; loss: 0.0120
+     Instance: 16000; loss: 0.0128
+     Instance: 24000; loss: 0.0134
+     Instance: 32000; loss: 0.0129
+     Instance: 40000; loss: 0.0137
+     Instance: 48000; loss: 0.0135
+     Instance: 56000; loss: 0.0128
+=== Epoch 51 Test ===
+gold_num =  8110  pred_num =  7992  right_num =  7387  relation_right_num =  7718  entity_right_num =  7462
+precision =  0.9242992992992993  recall =  0.9108508014796547  f1_value =  0.9175257731958762
+rel_precision =  0.9657157157157157  rel_recall =  0.9516646115906289  rel_f1_value =  0.9586386784250404
+ent_precision =  0.9336836836836837  ent_recall =  0.9200986436498151  ent_f1_value =  0.9268413861632095
+=== Epoch 52 train ===
+     Instance: 8000; loss: 0.0090
+     Instance: 16000; loss: 0.0087
+     Instance: 24000; loss: 0.0096
+     Instance: 32000; loss: 0.0093
+     Instance: 40000; loss: 0.0101
+     Instance: 48000; loss: 0.0101
+     Instance: 56000; loss: 0.0109
+=== Epoch 52 Test ===
+gold_num =  8110  pred_num =  8145  right_num =  7429  relation_right_num =  7806  entity_right_num =  7519
+precision =  0.9120933087783917  recall =  0.9160295930949445  f1_value =  0.91405721316518
+rel_precision =  0.9583793738489871  rel_recall =  0.9625154130702837  rel_f1_value =  0.9604429406336511
+ent_precision =  0.9231430325352977  ent_recall =  0.9271270036991369  ent_f1_value =  0.9251307290064595
+=== Epoch 53 train ===
+     Instance: 8000; loss: 0.0130
+     Instance: 16000; loss: 0.0130
+     Instance: 24000; loss: 0.0122
+     Instance: 32000; loss: 0.0119
+     Instance: 40000; loss: 0.0123
+     Instance: 48000; loss: 0.0124
+     Instance: 56000; loss: 0.0136
+=== Epoch 53 Test ===
+gold_num =  8110  pred_num =  8059  right_num =  7397  relation_right_num =  7727  entity_right_num =  7482
+precision =  0.9178558133763495  recall =  0.9120838471023428  f1_value =  0.9149607273177068
+rel_precision =  0.9588038218141208  rel_recall =  0.952774352651048  rel_f1_value =  0.9557795782052073
+ent_precision =  0.9284030276709269  ent_recall =  0.9225647348951911  ent_f1_value =  0.9254746737584265
+=== Epoch 54 train ===
+     Instance: 8000; loss: 0.0070
+     Instance: 16000; loss: 0.0086
+     Instance: 24000; loss: 0.0096
+     Instance: 32000; loss: 0.0095
+     Instance: 40000; loss: 0.0114
+     Instance: 48000; loss: 0.0112
+     Instance: 56000; loss: 0.0108
+=== Epoch 54 Test ===
+gold_num =  8110  pred_num =  7967  right_num =  7389  relation_right_num =  7690  entity_right_num =  7460
+precision =  0.9274507342789005  recall =  0.9110974106041924  f1_value =  0.9192013435342414
+rel_precision =  0.965231580268608  rel_recall =  0.9482120838471023  rel_f1_value =  0.9566461404490887
+ent_precision =  0.936362495293084  ent_recall =  0.9198520345252774  ent_f1_value =  0.9280338371586738
+=== Epoch 55 train ===
+     Instance: 8000; loss: 0.0139
+     Instance: 16000; loss: 0.0120
+     Instance: 24000; loss: 0.0110
+     Instance: 32000; loss: 0.0115
+     Instance: 40000; loss: 0.0106
+     Instance: 48000; loss: 0.0097
+     Instance: 56000; loss: 0.0093
+=== Epoch 55 Test ===
+gold_num =  8110  pred_num =  8102  right_num =  7446  relation_right_num =  7785  entity_right_num =  7520
+precision =  0.9190323376943964  recall =  0.9181257706535142  f1_value =  0.9185788304959289
+rel_precision =  0.960873858306591  rel_recall =  0.9599260172626387  rel_f1_value =  0.96039970392302
+ent_precision =  0.9281658849666748  ent_recall =  0.9272503082614056  ent_f1_value =  0.9277078707130519
+=== Epoch 56 train ===
+     Instance: 8000; loss: 0.0116
+     Instance: 16000; loss: 0.0128
+     Instance: 24000; loss: 0.0110
+     Instance: 32000; loss: 0.0102
+     Instance: 40000; loss: 0.0112
+     Instance: 48000; loss: 0.0112
+     Instance: 56000; loss: 0.0107
+=== Epoch 56 Test ===
+gold_num =  8110  pred_num =  8018  right_num =  7402  relation_right_num =  7726  entity_right_num =  7472
+precision =  0.9231728610626091  recall =  0.9127003699136869  f1_value =  0.917906746031746
+rel_precision =  0.9635819406335745  rel_recall =  0.9526510480887793  rel_f1_value =  0.9580853174603176
+ent_precision =  0.9319032177600399  ent_recall =  0.9213316892725031  ent_f1_value =  0.9265873015873016
+=== Epoch 57 train ===
+     Instance: 8000; loss: 0.0167
+     Instance: 16000; loss: 0.0130
+     Instance: 24000; loss: 0.0147
+     Instance: 32000; loss: 0.0153
+     Instance: 40000; loss: 0.0147
+     Instance: 48000; loss: 0.0137
+     Instance: 56000; loss: 0.0135
+=== Epoch 57 Test ===
+gold_num =  8110  pred_num =  7991  right_num =  7382  relation_right_num =  7728  entity_right_num =  7446
+precision =  0.9237892629207859  recall =  0.9102342786683107  f1_value =  0.9169616793987951
+rel_precision =  0.9670879739707171  rel_recall =  0.9528976572133169  rel_f1_value =  0.9599403763741382
+ent_precision =  0.9317982730571893  ent_recall =  0.9181257706535142  ent_f1_value =  0.9249114961803614
+=== Epoch 58 train ===
+     Instance: 8000; loss: 0.0057
+     Instance: 16000; loss: 0.0078
+     Instance: 24000; loss: 0.0074
+     Instance: 32000; loss: 0.0075
+     Instance: 40000; loss: 0.0092
+     Instance: 48000; loss: 0.0093
+     Instance: 56000; loss: 0.0100
+=== Epoch 58 Test ===
+gold_num =  8110  pred_num =  8126  right_num =  7422  relation_right_num =  7787  entity_right_num =  7503
+precision =  0.9133645089835097  recall =  0.9151664611590629  f1_value =  0.9142645971914264
+rel_precision =  0.9582820575929116  rel_recall =  0.9601726263871764  rel_f1_value =  0.9592264104459226
+ent_precision =  0.9233325129214865  ent_recall =  0.925154130702836  ent_f1_value =  0.9242424242424242
+=== Epoch 59 train ===
+     Instance: 8000; loss: 0.0163
+     Instance: 16000; loss: 0.0135
+     Instance: 24000; loss: 0.0133
+     Instance: 32000; loss: 0.0118
+     Instance: 40000; loss: 0.0109
+     Instance: 48000; loss: 0.0105
+     Instance: 56000; loss: 0.0096
+=== Epoch 59 Test ===
+gold_num =  8110  pred_num =  8027  right_num =  7407  relation_right_num =  7740  entity_right_num =  7482
+precision =  0.9227606826959013  recall =  0.9133168927250308  f1_value =  0.9180145008365866
+rel_precision =  0.9642456708608447  rel_recall =  0.9543773119605425  rel_f1_value =  0.9592861126603459
+ent_precision =  0.9321041484988165  ent_recall =  0.9225647348951911  ent_f1_value =  0.927309908905001
+=== Epoch 60 train ===
+     Instance: 8000; loss: 0.0181
+     Instance: 16000; loss: 0.0126
+     Instance: 24000; loss: 0.0117
+     Instance: 32000; loss: 0.0105
+     Instance: 40000; loss: 0.0112
+     Instance: 48000; loss: 0.0110
+     Instance: 56000; loss: 0.0106
+=== Epoch 60 Test ===
+gold_num =  8110  pred_num =  8070  right_num =  7406  relation_right_num =  7766  entity_right_num =  7476
+precision =  0.9177199504337051  recall =  0.913193588162762  f1_value =  0.9154511742892459
+rel_precision =  0.9623296158612143  rel_recall =  0.9575832305795314  rel_f1_value =  0.9599505562422744
+ent_precision =  0.9263940520446097  ent_recall =  0.9218249075215783  ent_f1_value =  0.9241038318912238
+=== Epoch 61 train ===
+     Instance: 8000; loss: 0.0112
+     Instance: 16000; loss: 0.0128
+     Instance: 24000; loss: 0.0117
+     Instance: 32000; loss: 0.0125
+     Instance: 40000; loss: 0.0129
+     Instance: 48000; loss: 0.0118
+     Instance: 56000; loss: 0.0118
+=== Epoch 61 Test ===
+gold_num =  8110  pred_num =  8086  right_num =  7422  relation_right_num =  7794  entity_right_num =  7488
+precision =  0.9178827603264902  recall =  0.9151664611590629  f1_value =  0.9165225981723882
+rel_precision =  0.963888201830324  rel_recall =  0.961035758323058  rel_f1_value =  0.9624598666337367
+ent_precision =  0.9260450160771704  ent_recall =  0.923304562268804  ent_f1_value =  0.9246727587058533
+=== Epoch 62 train ===
+     Instance: 8000; loss: 0.0158
+     Instance: 16000; loss: 0.0127
+     Instance: 24000; loss: 0.0110
+     Instance: 32000; loss: 0.0101
+     Instance: 40000; loss: 0.0104
+     Instance: 48000; loss: 0.0105
+     Instance: 56000; loss: 0.0100
+=== Epoch 62 Test ===
+gold_num =  8110  pred_num =  8101  right_num =  7445  relation_right_num =  7795  entity_right_num =  7516
+precision =  0.9190223429206271  recall =  0.9180024660912454  f1_value =  0.9185121213990499
+rel_precision =  0.9622268855696827  rel_recall =  0.9611590628853267  rel_f1_value =  0.9616926778113627
+ent_precision =  0.9277866930008641  ent_recall =  0.9267570900123304  ent_f1_value =  0.9272716056998335
+=== Epoch 63 train ===
+     Instance: 8000; loss: 0.0168
+     Instance: 16000; loss: 0.0118
+     Instance: 24000; loss: 0.0093
+     Instance: 32000; loss: 0.0105
+     Instance: 40000; loss: 0.0102
+     Instance: 48000; loss: 0.0103
+     Instance: 56000; loss: 0.0097
+=== Epoch 63 Test ===
+gold_num =  8110  pred_num =  8149  right_num =  7458  relation_right_num =  7836  entity_right_num =  7539
+precision =  0.9152043195484109  recall =  0.9196054254007399  f1_value =  0.917399594070976
+rel_precision =  0.9615903791876304  rel_recall =  0.9662145499383478  rel_f1_value =  0.9638969186296821
+ent_precision =  0.9251441894711008  ent_recall =  0.9295930949445129  ent_f1_value =  0.927363306476413
+=== Epoch 64 train ===
+     Instance: 8000; loss: 0.0063
+     Instance: 16000; loss: 0.0067
+     Instance: 24000; loss: 0.0066
+     Instance: 32000; loss: 0.0064
+     Instance: 40000; loss: 0.0064
+     Instance: 48000; loss: 0.0072
+     Instance: 56000; loss: 0.0069
+=== Epoch 64 Test ===
+gold_num =  8110  pred_num =  8041  right_num =  7409  relation_right_num =  7742  entity_right_num =  7489
+precision =  0.9214028105956971  recall =  0.9135635018495685  f1_value =  0.9174664107485605
+rel_precision =  0.9628155702027111  rel_recall =  0.9546239210850801  rel_f1_value =  0.9587022475388521
+ent_precision =  0.9313518219126974  ent_recall =  0.9234278668310727  ent_f1_value =  0.9273729180855674
+=== Epoch 65 train ===
+     Instance: 8000; loss: 0.0056
+     Instance: 16000; loss: 0.0075
+     Instance: 24000; loss: 0.0078
+     Instance: 32000; loss: 0.0076
+     Instance: 40000; loss: 0.0076
+     Instance: 48000; loss: 0.0086
+     Instance: 56000; loss: 0.0088
+=== Epoch 65 Test ===
+gold_num =  8110  pred_num =  7991  right_num =  7400  relation_right_num =  7725  entity_right_num =  7468
+precision =  0.9260417970216493  recall =  0.9124537607891492  f1_value =  0.9191975653686107
+rel_precision =  0.9667125516205731  rel_recall =  0.9525277435265105  rel_f1_value =  0.9595677287125024
+ent_precision =  0.934551370291578  ent_recall =  0.9208384710234279  ent_f1_value =  0.9276442456990248
+=== Epoch 66 train ===
+     Instance: 8000; loss: 0.0064
+     Instance: 16000; loss: 0.0063
+     Instance: 24000; loss: 0.0061
+     Instance: 32000; loss: 0.0060
+     Instance: 40000; loss: 0.0059
+     Instance: 48000; loss: 0.0065
+     Instance: 56000; loss: 0.0065
+=== Epoch 66 Test ===
+gold_num =  8110  pred_num =  8065  right_num =  7420  relation_right_num =  7766  entity_right_num =  7494
+precision =  0.9200247985120893  recall =  0.9149198520345253  f1_value =  0.917465224111283
+rel_precision =  0.9629262244265344  rel_recall =  0.9575832305795314  rel_f1_value =  0.9602472952086554
+ent_precision =  0.9292002479851209  ent_recall =  0.9240443896424168  ent_f1_value =  0.9266151468315301
+=== Epoch 67 train ===
+     Instance: 8000; loss: 0.0097
+     Instance: 16000; loss: 0.0095
+     Instance: 24000; loss: 0.0104
+     Instance: 32000; loss: 0.0091
+     Instance: 40000; loss: 0.0099
+     Instance: 48000; loss: 0.0091
+     Instance: 56000; loss: 0.0101
+=== Epoch 67 Test ===
+gold_num =  8110  pred_num =  8087  right_num =  7442  relation_right_num =  7791  entity_right_num =  7512
+precision =  0.920242364288364  recall =  0.917632552404439  f1_value =  0.9189356053590171
+rel_precision =  0.9633980462470632  rel_recall =  0.9606658446362515  rel_f1_value =  0.9620300055565846
+ent_precision =  0.9288982317299369  ent_recall =  0.9262638717632552  ent_f1_value =  0.9275791813298758
+=== Epoch 68 train ===
+     Instance: 8000; loss: 0.0060
+     Instance: 16000; loss: 0.0089
+     Instance: 24000; loss: 0.0080
+     Instance: 32000; loss: 0.0085
+     Instance: 40000; loss: 0.0081
+     Instance: 48000; loss: 0.0077
+     Instance: 56000; loss: 0.0073
+=== Epoch 68 Test ===
+gold_num =  8110  pred_num =  8128  right_num =  7441  relation_right_num =  7829  entity_right_num =  7510
+precision =  0.9154773622047244  recall =  0.9175092478421701  f1_value =  0.9164921788397586
+rel_precision =  0.9632135826771654  rel_recall =  0.965351418002466  rel_f1_value =  0.9642813154329352
+ent_precision =  0.9239665354330708  ent_recall =  0.9260172626387176  ent_f1_value =  0.9249907624091636
+=== Epoch 69 train ===
+     Instance: 8000; loss: 0.0036
+     Instance: 16000; loss: 0.0046
+     Instance: 24000; loss: 0.0068
+     Instance: 32000; loss: 0.0061
+     Instance: 40000; loss: 0.0081
+     Instance: 48000; loss: 0.0088
+     Instance: 56000; loss: 0.0084
+=== Epoch 69 Test ===
+gold_num =  8110  pred_num =  8085  right_num =  7451  relation_right_num =  7789  entity_right_num =  7518
+precision =  0.9215831787260359  recall =  0.9187422934648583  f1_value =  0.9201605433775858
+rel_precision =  0.9633889919604205  rel_recall =  0.9604192355117139  rel_f1_value =  0.961901821549861
+ent_precision =  0.9298701298701298  ent_recall =  0.9270036991368681  ent_f1_value =  0.9284347020685396
+=== Epoch 70 train ===
+     Instance: 8000; loss: 0.0068
+     Instance: 16000; loss: 0.0081
+     Instance: 24000; loss: 0.0083
+     Instance: 32000; loss: 0.0076
+     Instance: 40000; loss: 0.0082
+     Instance: 48000; loss: 0.0085
+     Instance: 56000; loss: 0.0080
+=== Epoch 70 Test ===
+gold_num =  8110  pred_num =  7965  right_num =  7406  relation_right_num =  7701  entity_right_num =  7472
+precision =  0.9298179535467671  recall =  0.913193588162762  f1_value =  0.9214307931570762
+rel_precision =  0.9668549905838042  rel_recall =  0.9495684340320591  rel_f1_value =  0.9581337480559876
+ent_precision =  0.9381042059008161  ent_recall =  0.9213316892725031  ent_f1_value =  0.929642301710731
+Achieving Best Result on Test Set.
+=== Epoch 71 train ===
+     Instance: 8000; loss: 0.0059
+     Instance: 16000; loss: 0.0059
+     Instance: 24000; loss: 0.0060
+     Instance: 32000; loss: 0.0070
+     Instance: 40000; loss: 0.0066
+     Instance: 48000; loss: 0.0081
+     Instance: 56000; loss: 0.0077
+=== Epoch 71 Test ===
+gold_num =  8110  pred_num =  8133  right_num =  7449  relation_right_num =  7828  entity_right_num =  7518
+precision =  0.915898192548875  recall =  0.9184956843403206  f1_value =  0.9171950994274457
+rel_precision =  0.9624984630517645  rel_recall =  0.9652281134401973  rel_f1_value =  0.9638613556609
+ent_precision =  0.9243821468092954  ent_recall =  0.9270036991368681  ent_f1_value =  0.9256910669211352
+=== Epoch 72 train ===
+     Instance: 8000; loss: 0.0081
+     Instance: 16000; loss: 0.0066
+     Instance: 24000; loss: 0.0082
+     Instance: 32000; loss: 0.0087
+     Instance: 40000; loss: 0.0087
+     Instance: 48000; loss: 0.0097
+     Instance: 56000; loss: 0.0095
+=== Epoch 72 Test ===
+gold_num =  8110  pred_num =  8116  right_num =  7449  relation_right_num =  7808  entity_right_num =  7521
+precision =  0.9178166584524396  recall =  0.9184956843403206  f1_value =  0.9181560458523358
+rel_precision =  0.9620502710694924  rel_recall =  0.9627620221948212  rel_f1_value =  0.962406015037594
+ent_precision =  0.9266880236569739  ent_recall =  0.9273736128236745  ent_f1_value =  0.9270306914828055
+=== Epoch 73 train ===
+     Instance: 8000; loss: 0.0070
+     Instance: 16000; loss: 0.0094
+     Instance: 24000; loss: 0.0097
+     Instance: 32000; loss: 0.0086
+     Instance: 40000; loss: 0.0093
+     Instance: 48000; loss: 0.0090
+     Instance: 56000; loss: 0.0086
+=== Epoch 73 Test ===
+gold_num =  8110  pred_num =  7966  right_num =  7409  relation_right_num =  7697  entity_right_num =  7480
+precision =  0.9300778307808185  recall =  0.9135635018495685  f1_value =  0.92174670315999
+rel_precision =  0.9662314838061763  rel_recall =  0.9490752157829839  rel_f1_value =  0.9575765115700423
+ent_precision =  0.9389907105197087  ent_recall =  0.9223181257706535  ent_f1_value =  0.9305797462055238
+Achieving Best Result on Test Set.
+=== Epoch 74 train ===
+     Instance: 8000; loss: 0.0072
+     Instance: 16000; loss: 0.0072
+     Instance: 24000; loss: 0.0069
+     Instance: 32000; loss: 0.0062
+     Instance: 40000; loss: 0.0066
+     Instance: 48000; loss: 0.0063
+     Instance: 56000; loss: 0.0062
+=== Epoch 74 Test ===
+gold_num =  8110  pred_num =  8017  right_num =  7419  relation_right_num =  7754  entity_right_num =  7496
+precision =  0.9254085069227891  recall =  0.9147965474722565  f1_value =  0.920071929063062
+rel_precision =  0.9671947112386179  rel_recall =  0.9561035758323058  rel_f1_value =  0.9616171637626341
+ent_precision =  0.9350130971685169  ent_recall =  0.9242909987669544  ent_f1_value =  0.9296211322626651
+=== Epoch 75 train ===
+     Instance: 8000; loss: 0.0065
+     Instance: 16000; loss: 0.0074
+     Instance: 24000; loss: 0.0082
+     Instance: 32000; loss: 0.0081
+     Instance: 40000; loss: 0.0076
+     Instance: 48000; loss: 0.0073
+     Instance: 56000; loss: 0.0068
+=== Epoch 75 Test ===
+gold_num =  8110  pred_num =  8033  right_num =  7399  relation_right_num =  7750  entity_right_num =  7483
+precision =  0.9210755633013818  recall =  0.9123304562268804  f1_value =  0.9166821532552809
+rel_precision =  0.9647703224200175  rel_recall =  0.9556103575832305  rel_f1_value =  0.9601684940841231
+ent_precision =  0.9315324287314827  ent_recall =  0.9226880394574599  ent_f1_value =  0.9270891408040638
+=== Epoch 76 train ===
+     Instance: 8000; loss: 0.0050
+     Instance: 16000; loss: 0.0081
+     Instance: 24000; loss: 0.0097
+     Instance: 32000; loss: 0.0102
+     Instance: 40000; loss: 0.0092
+     Instance: 48000; loss: 0.0090
+     Instance: 56000; loss: 0.0091
+=== Epoch 76 Test ===
+gold_num =  8110  pred_num =  8004  right_num =  7397  relation_right_num =  7718  entity_right_num =  7480
+precision =  0.9241629185407296  recall =  0.9120838471023428  f1_value =  0.9180836539654958
+rel_precision =  0.9642678660669665  rel_recall =  0.9516646115906289  rel_f1_value =  0.9579247859004592
+ent_precision =  0.9345327336331835  ent_recall =  0.9223181257706535  ent_f1_value =  0.9283852550577137
+=== Epoch 77 train ===
+     Instance: 8000; loss: 0.0083
+     Instance: 16000; loss: 0.0140
+     Instance: 24000; loss: 0.0124
+     Instance: 32000; loss: 0.0108
+     Instance: 40000; loss: 0.0102
+     Instance: 48000; loss: 0.0102
+     Instance: 56000; loss: 0.0095
+=== Epoch 77 Test ===
+gold_num =  8110  pred_num =  8027  right_num =  7418  relation_right_num =  7745  entity_right_num =  7487
+precision =  0.9241310576803289  recall =  0.9146732429099876  f1_value =  0.9193778273532874
+rel_precision =  0.964868568581039  rel_recall =  0.9549938347718866  rel_f1_value =  0.9599058065315734
+ent_precision =  0.9327270462190108  ent_recall =  0.9231812577065351  ent_f1_value =  0.9279296027762285
+=== Epoch 78 train ===
+     Instance: 8000; loss: 0.0061
+     Instance: 16000; loss: 0.0065
+     Instance: 24000; loss: 0.0075
+     Instance: 32000; loss: 0.0082
+     Instance: 40000; loss: 0.0073
+     Instance: 48000; loss: 0.0070
+     Instance: 56000; loss: 0.0079
+=== Epoch 78 Test ===
+gold_num =  8110  pred_num =  8100  right_num =  7428  relation_right_num =  7797  entity_right_num =  7498
+precision =  0.917037037037037  recall =  0.9159062885326757  f1_value =  0.9164713140037014
+rel_precision =  0.9625925925925926  rel_recall =  0.9614056720098644  rel_f1_value =  0.9619987661937076
+ent_precision =  0.9256790123456791  ent_recall =  0.924537607891492  ent_f1_value =  0.9251079580505861
+=== Epoch 79 train ===
+     Instance: 8000; loss: 0.0075
+     Instance: 16000; loss: 0.0096
+     Instance: 24000; loss: 0.0095
+     Instance: 32000; loss: 0.0082
+     Instance: 40000; loss: 0.0081
+     Instance: 48000; loss: 0.0074
+     Instance: 56000; loss: 0.0067
+=== Epoch 79 Test ===
+gold_num =  8110  pred_num =  8139  right_num =  7443  relation_right_num =  7806  entity_right_num =  7525
+precision =  0.914485809067453  recall =  0.9177558569667078  f1_value =  0.9161179149486123
+rel_precision =  0.9590858827865831  rel_recall =  0.9625154130702837  rel_f1_value =  0.9607975875438488
+ent_precision =  0.9245607568497358  ent_recall =  0.9278668310727497  ent_f1_value =  0.9262108437442305
+=== Epoch 80 train ===
+     Instance: 8000; loss: 0.0050
+     Instance: 16000; loss: 0.0057
+     Instance: 24000; loss: 0.0047
+     Instance: 32000; loss: 0.0046
+     Instance: 40000; loss: 0.0050
+     Instance: 48000; loss: 0.0054
+     Instance: 56000; loss: 0.0056
+=== Epoch 80 Test ===
+gold_num =  8110  pred_num =  8047  right_num =  7439  relation_right_num =  7779  entity_right_num =  7510
+precision =  0.9244438921337145  recall =  0.9172626387176326  f1_value =  0.9208392647149841
+rel_precision =  0.9666956629799925  rel_recall =  0.9591861898890259  rel_f1_value =  0.9629262858203874
+ent_precision =  0.9332670560457313  ent_recall =  0.9260172626387176  ent_f1_value =  0.9296280250046419
+=== Epoch 81 train ===
+     Instance: 8000; loss: 0.0035
+     Instance: 16000; loss: 0.0047
+     Instance: 24000; loss: 0.0048
+     Instance: 32000; loss: 0.0047
+     Instance: 40000; loss: 0.0051
+     Instance: 48000; loss: 0.0055
+     Instance: 56000; loss: 0.0054
+=== Epoch 81 Test ===
+gold_num =  8110  pred_num =  8053  right_num =  7417  relation_right_num =  7775  entity_right_num =  7484
+precision =  0.9210232211598162  recall =  0.9145499383477189  f1_value =  0.917775165501454
+rel_precision =  0.9654787035887247  rel_recall =  0.9586929716399507  rel_f1_value =  0.9620738724246737
+ent_precision =  0.929343101949584  ent_recall =  0.9228113440197288  ent_f1_value =  0.9260657056239561
+=== Epoch 82 train ===
+     Instance: 8000; loss: 0.0062
+     Instance: 16000; loss: 0.0082
+     Instance: 24000; loss: 0.0063
+     Instance: 32000; loss: 0.0061
+     Instance: 40000; loss: 0.0056
+     Instance: 48000; loss: 0.0054
+     Instance: 56000; loss: 0.0059
+=== Epoch 82 Test ===
+gold_num =  8110  pred_num =  8108  right_num =  7436  relation_right_num =  7806  entity_right_num =  7506
+precision =  0.9171188949185989  recall =  0.9168927250308262  f1_value =  0.9170057960291035
+rel_precision =  0.9627528367044894  rel_recall =  0.9625154130702837  rel_f1_value =  0.9626341102478728
+ent_precision =  0.9257523433645782  ent_recall =  0.9255240443896424  ent_f1_value =  0.925638179800222
+=== Epoch 83 train ===
+     Instance: 8000; loss: 0.0049
+     Instance: 16000; loss: 0.0057
+     Instance: 24000; loss: 0.0050
+     Instance: 32000; loss: 0.0056
+     Instance: 40000; loss: 0.0053
+     Instance: 48000; loss: 0.0049
+     Instance: 56000; loss: 0.0054
+=== Epoch 83 Test ===
+gold_num =  8110  pred_num =  8030  right_num =  7428  relation_right_num =  7744  entity_right_num =  7496
+precision =  0.9250311332503113  recall =  0.9159062885326757  f1_value =  0.920446096654275
+rel_precision =  0.9643835616438357  rel_recall =  0.9548705302096178  rel_f1_value =  0.9596034696406445
+ent_precision =  0.9334993773349938  ent_recall =  0.9242909987669544  ent_f1_value =  0.9288723667905824
+=== Epoch 84 train ===
+     Instance: 8000; loss: 0.0041
+     Instance: 16000; loss: 0.0071
+     Instance: 24000; loss: 0.0062
+     Instance: 32000; loss: 0.0061
+     Instance: 40000; loss: 0.0055
+     Instance: 48000; loss: 0.0056
+     Instance: 56000; loss: 0.0052
+=== Epoch 84 Test ===
+gold_num =  8110  pred_num =  7995  right_num =  7412  relation_right_num =  7713  entity_right_num =  7478
+precision =  0.9270794246404003  recall =  0.9139334155363749  f1_value =  0.9204594846321018
+rel_precision =  0.9647279549718574  rel_recall =  0.9510480887792848  rel_f1_value =  0.9578391803787644
+ent_precision =  0.9353345841150719  ent_recall =  0.9220715166461159  ent_f1_value =  0.9286556969885128
+=== Epoch 85 train ===
+     Instance: 8000; loss: 0.0029
+     Instance: 16000; loss: 0.0069
+     Instance: 24000; loss: 0.0062
+     Instance: 32000; loss: 0.0056
+     Instance: 40000; loss: 0.0057
+     Instance: 48000; loss: 0.0062
+     Instance: 56000; loss: 0.0067
+=== Epoch 85 Test ===
+gold_num =  8110  pred_num =  8066  right_num =  7431  relation_right_num =  7770  entity_right_num =  7506
+precision =  0.921274485494669  recall =  0.9162762022194821  f1_value =  0.9187685459940652
+rel_precision =  0.963302752293578  rel_recall =  0.9580764488286067  rel_f1_value =  0.9606824925816024
+ent_precision =  0.9305727746094719  ent_recall =  0.9255240443896424  ent_f1_value =  0.9280415430267063
+=== Epoch 86 train ===
+     Instance: 8000; loss: 0.0036
+     Instance: 16000; loss: 0.0036
+     Instance: 24000; loss: 0.0034
+     Instance: 32000; loss: 0.0037
+     Instance: 40000; loss: 0.0042
+     Instance: 48000; loss: 0.0049
+     Instance: 56000; loss: 0.0047
+=== Epoch 86 Test ===
+gold_num =  8110  pred_num =  8020  right_num =  7422  relation_right_num =  7754  entity_right_num =  7486
+precision =  0.9254364089775561  recall =  0.9151664611590629  f1_value =  0.920272783632982
+rel_precision =  0.9668329177057357  rel_recall =  0.9561035758323058  rel_f1_value =  0.9614383137011778
+ent_precision =  0.9334164588528678  ent_recall =  0.9230579531442663  ent_f1_value =  0.9282083075015499
+=== Epoch 87 train ===
+     Instance: 8000; loss: 0.0127
+     Instance: 16000; loss: 0.0129
+     Instance: 24000; loss: 0.0116
+     Instance: 32000; loss: 0.0100
+     Instance: 40000; loss: 0.0101
+     Instance: 48000; loss: 0.0093
+     Instance: 56000; loss: 0.0086
+=== Epoch 87 Test ===
+gold_num =  8110  pred_num =  8033  right_num =  7431  relation_right_num =  7755  entity_right_num =  7500
+precision =  0.9250591310842774  recall =  0.9162762022194821  f1_value =  0.9206467199405314
+rel_precision =  0.9653927548860949  rel_recall =  0.9562268803945746  rel_f1_value =  0.9607879576286935
+ent_precision =  0.9336486991161459  ent_recall =  0.9247842170160296  ent_f1_value =  0.9291953168556031
+=== Epoch 88 train ===
+     Instance: 8000; loss: 0.0043
+     Instance: 16000; loss: 0.0039
+     Instance: 24000; loss: 0.0041
+     Instance: 32000; loss: 0.0053
+     Instance: 40000; loss: 0.0048
+     Instance: 48000; loss: 0.0052
+     Instance: 56000; loss: 0.0050
+=== Epoch 88 Test ===
+gold_num =  8110  pred_num =  8072  right_num =  7445  relation_right_num =  7804  entity_right_num =  7511
+precision =  0.9223240832507433  recall =  0.9180024660912454  f1_value =  0.9201582004696577
+rel_precision =  0.966798810703667  rel_recall =  0.962268803945746  rel_f1_value =  0.96452848844395
+ent_precision =  0.9305004955401388  ent_recall =  0.9261405672009865  ent_f1_value =  0.9283154121863799
+=== Epoch 89 train ===
+     Instance: 8000; loss: 0.0071
+     Instance: 16000; loss: 0.0072
+     Instance: 24000; loss: 0.0056
+     Instance: 32000; loss: 0.0096
+     Instance: 40000; loss: 0.0090
+     Instance: 48000; loss: 0.0080
+     Instance: 56000; loss: 0.0084
+=== Epoch 89 Test ===
+gold_num =  8110  pred_num =  8020  right_num =  7414  relation_right_num =  7746  entity_right_num =  7477
+precision =  0.9244389027431421  recall =  0.9141800246609124  f1_value =  0.9192808431494109
+rel_precision =  0.9658354114713217  rel_recall =  0.9551171393341553  rel_f1_value =  0.960446373217607
+ent_precision =  0.9322942643391521  ent_recall =  0.9219482120838471  ent_f1_value =  0.9270923744575326
+=== Epoch 90 train ===
+     Instance: 8000; loss: 0.0040
+     Instance: 16000; loss: 0.0034
+     Instance: 24000; loss: 0.0053
+     Instance: 32000; loss: 0.0057
+     Instance: 40000; loss: 0.0055
+     Instance: 48000; loss: 0.0053
+     Instance: 56000; loss: 0.0051
+=== Epoch 90 Test ===
+gold_num =  8110  pred_num =  7987  right_num =  7415  relation_right_num =  7736  entity_right_num =  7480
+precision =  0.9283836233880055  recall =  0.9143033292231812  f1_value =  0.9212896813070758
+rel_precision =  0.9685739326405409  rel_recall =  0.9538840937114673  rel_f1_value =  0.9611728893582655
+ent_precision =  0.9365218480030049  ent_recall =  0.9223181257706535  ent_f1_value =  0.9293657203205566
+=== Epoch 91 train ===
+     Instance: 8000; loss: 0.0159
+     Instance: 16000; loss: 0.0090
+     Instance: 24000; loss: 0.0068
+     Instance: 32000; loss: 0.0065
+     Instance: 40000; loss: 0.0059
+     Instance: 48000; loss: 0.0058
+     Instance: 56000; loss: 0.0064
+=== Epoch 91 Test ===
+gold_num =  8110  pred_num =  7972  right_num =  7439  relation_right_num =  7743  entity_right_num =  7501
+precision =  0.93314099347717  recall =  0.9172626387176326  f1_value =  0.9251336898395722
+rel_precision =  0.9712744606121425  rel_recall =  0.9547472256473489  rel_f1_value =  0.9629399328441736
+ent_precision =  0.9409182137481185  ent_recall =  0.9249075215782984  ent_f1_value =  0.9328441736102475
+Achieving Best Result on Test Set.
+=== Epoch 92 train ===
+     Instance: 8000; loss: 0.0030
+     Instance: 16000; loss: 0.0044
+     Instance: 24000; loss: 0.0063
+     Instance: 32000; loss: 0.0074
+     Instance: 40000; loss: 0.0075
+     Instance: 48000; loss: 0.0069
+     Instance: 56000; loss: 0.0066
+=== Epoch 92 Test ===
+gold_num =  8110  pred_num =  8031  right_num =  7439  relation_right_num =  7734  entity_right_num =  7516
+precision =  0.9262856431328602  recall =  0.9172626387176326  f1_value =  0.9217520599715011
+rel_precision =  0.9630183040717221  rel_recall =  0.9536374845869298  rel_f1_value =  0.9583049377361998
+ent_precision =  0.9358734902253767  ent_recall =  0.9267570900123304  ent_f1_value =  0.9312929806083886
+=== Epoch 93 train ===
+     Instance: 8000; loss: 0.0085
+     Instance: 16000; loss: 0.0068
+     Instance: 24000; loss: 0.0061
+     Instance: 32000; loss: 0.0069
+     Instance: 40000; loss: 0.0062
+     Instance: 48000; loss: 0.0066
+     Instance: 56000; loss: 0.0062
+=== Epoch 93 Test ===
+gold_num =  8110  pred_num =  8036  right_num =  7448  relation_right_num =  7772  entity_right_num =  7516
+precision =  0.926829268292683  recall =  0.9183723797780518  f1_value =  0.9225814443205748
+rel_precision =  0.9671478347436535  rel_recall =  0.9583230579531443  rel_f1_value =  0.9627152235847888
+ent_precision =  0.9352911896465903  ent_recall =  0.9267570900123304  ent_f1_value =  0.9310045831784963
+=== Epoch 94 train ===
+     Instance: 8000; loss: 0.0061
+     Instance: 16000; loss: 0.0047
+     Instance: 24000; loss: 0.0054
+     Instance: 32000; loss: 0.0071
+     Instance: 40000; loss: 0.0067
+     Instance: 48000; loss: 0.0061
+     Instance: 56000; loss: 0.0055
+=== Epoch 94 Test ===
+gold_num =  8110  pred_num =  8012  right_num =  7427  relation_right_num =  7744  entity_right_num =  7496
+precision =  0.9269845232151772  recall =  0.9157829839704069  f1_value =  0.9213497084728942
+rel_precision =  0.9665501747378932  rel_recall =  0.9548705302096178  rel_f1_value =  0.9606748542364472
+ent_precision =  0.9355966050923614  ent_recall =  0.9242909987669544  ent_f1_value =  0.929909440516065
+=== Epoch 95 train ===
+     Instance: 8000; loss: 0.0035
+     Instance: 16000; loss: 0.0037
+     Instance: 24000; loss: 0.0043
+     Instance: 32000; loss: 0.0040
+     Instance: 40000; loss: 0.0042
+     Instance: 48000; loss: 0.0039
+     Instance: 56000; loss: 0.0042
+=== Epoch 95 Test ===
+gold_num =  8110  pred_num =  8056  right_num =  7449  relation_right_num =  7777  entity_right_num =  7520
+precision =  0.9246524329692155  recall =  0.9184956843403206  f1_value =  0.9215637758258073
+rel_precision =  0.9653674280039722  rel_recall =  0.9589395807644883  rel_f1_value =  0.9621427687739701
+ent_precision =  0.9334657398212513  ent_recall =  0.9272503082614056  ent_f1_value =  0.9303476432017815
+=== Epoch 96 train ===
+     Instance: 8000; loss: 0.0115
+     Instance: 16000; loss: 0.0079
+     Instance: 24000; loss: 0.0069
+     Instance: 32000; loss: 0.0060
+     Instance: 40000; loss: 0.0061
+     Instance: 48000; loss: 0.0069
+     Instance: 56000; loss: 0.0066
+=== Epoch 96 Test ===
+gold_num =  8110  pred_num =  8008  right_num =  7430  relation_right_num =  7741  entity_right_num =  7503
+precision =  0.9278221778221778  recall =  0.9161528976572133  f1_value =  0.9219506142201266
+rel_precision =  0.9666583416583416  rel_recall =  0.9545006165228114  rel_f1_value =  0.9605410100508748
+ent_precision =  0.936938061938062  ent_recall =  0.925154130702836  ent_f1_value =  0.9310088100260578
+=== Epoch 97 train ===
+     Instance: 8000; loss: 0.0028
+     Instance: 16000; loss: 0.0052
+     Instance: 24000; loss: 0.0069
+     Instance: 32000; loss: 0.0076
+     Instance: 40000; loss: 0.0076
+     Instance: 48000; loss: 0.0068
+     Instance: 56000; loss: 0.0069
+=== Epoch 97 Test ===
+gold_num =  8110  pred_num =  8052  right_num =  7444  relation_right_num =  7782  entity_right_num =  7522
+precision =  0.9244908097367114  recall =  0.9178791615289765  f1_value =  0.9211731221383492
+rel_precision =  0.966467958271237  rel_recall =  0.9595561035758323  rel_f1_value =  0.9629996287588171
+ent_precision =  0.9341778440139096  ent_recall =  0.9274969173859433  ent_f1_value =  0.9308253928969188
+=== Epoch 98 train ===
+     Instance: 8000; loss: 0.0047
+     Instance: 16000; loss: 0.0035
+     Instance: 24000; loss: 0.0038
+     Instance: 32000; loss: 0.0045
+     Instance: 40000; loss: 0.0053
+     Instance: 48000; loss: 0.0051
+     Instance: 56000; loss: 0.0049
+=== Epoch 98 Test ===
+gold_num =  8110  pred_num =  7990  right_num =  7427  relation_right_num =  7734  entity_right_num =  7495
+precision =  0.9295369211514393  recall =  0.9157829839704069  f1_value =  0.9226086956521738
+rel_precision =  0.9679599499374217  rel_recall =  0.9536374845869298  rel_f1_value =  0.9607453416149069
+ent_precision =  0.9380475594493116  ent_recall =  0.9241676942046856  ent_f1_value =  0.931055900621118
+=== Epoch 99 train ===
+     Instance: 8000; loss: 0.0104
+     Instance: 16000; loss: 0.0069
+     Instance: 24000; loss: 0.0054
+     Instance: 32000; loss: 0.0053
+     Instance: 40000; loss: 0.0049
+     Instance: 48000; loss: 0.0045
+     Instance: 56000; loss: 0.0046
+=== Epoch 99 Test ===
+gold_num =  8110  pred_num =  8039  right_num =  7440  relation_right_num =  7773  entity_right_num =  7508
+precision =  0.925488244806568  recall =  0.9173859432799013  f1_value =  0.9214192829277355
+rel_precision =  0.9669113073765394  rel_recall =  0.958446362515413  rel_f1_value =  0.9626602266394203
+ent_precision =  0.9339470083343699  ent_recall =  0.92577065351418  ent_f1_value =  0.9298408570190103
+Best result on test set is 0.925134 achieving at epoch 91.
+/pytorch/torch/csrc/utils/python_arg_parser.cpp:756: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha)
