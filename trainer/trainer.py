@@ -89,7 +89,7 @@ class Trainer(nn.Module):
             torch.cuda.empty_cache()
             # Validation
             print("=== Epoch %d Validation ===" % epoch)
-            result = self.eval_model(self.val_loader)
+            result = self.eval_model(self.data.valid_loader)
             # Test
             # print("=== Epoch %d Test ===" % epoch, flush=True)
             # result = self.eval_model(self.data.test_loader)
