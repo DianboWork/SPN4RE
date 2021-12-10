@@ -88,14 +88,14 @@ class Trainer(nn.Module):
             gc.collect()
             torch.cuda.empty_cache()
             # Validation
-            # print("=== Epoch %d Validation ===" % epoch)
-            # result = self.eval_model(self.val_loader)
+            print("=== Epoch %d Validation ===" % epoch)
+            result = self.eval_model(self.val_loader)
             # Test
-            print("=== Epoch %d Test ===" % epoch, flush=True)
-            result = self.eval_model(self.data.test_loader)
+            # print("=== Epoch %d Test ===" % epoch, flush=True)
+            # result = self.eval_model(self.data.test_loader)
             f1 = result['f1']
             if f1 > best_f1:
-                print("Achieving Best Result on Test Set.", flush=True)
+                print("Achieving Best Result on Validation Set.", flush=True)
                 # torch.save({'state_dict': self.model.state_dict()}, self.args.generated_param_directory + " %s_%s_epoch_%d_f1_%.4f.model" %(self.model.name, self.args.dataset_name, epoch, result['f1']))
                 best_f1 = f1
                 best_result_epoch = epoch
@@ -103,7 +103,7 @@ class Trainer(nn.Module):
             #     break
             gc.collect()
             torch.cuda.empty_cache()
-        print("Best result on test set is %f achieving at epoch %d." % (best_f1, best_result_epoch), flush=True)
+        print("Best result on validation set is %f achieving at epoch %d." % (best_f1, best_result_epoch), flush=True)
 
 
     def eval_model(self, eval_loader):
